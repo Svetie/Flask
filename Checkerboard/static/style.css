@@ -1,0 +1,19 @@
+.line {
+    height: 50px;
+    width: auto;
+    background-color: antiquewhite;
+    display: flex;
+}
+.square {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: black;
+}
