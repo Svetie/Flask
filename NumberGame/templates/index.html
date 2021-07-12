@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Great Number Game</title>
+</head>
+<body>
+    <div id="container">
+        <h3>Welcome to the Great Number Game</h3>
+        <h4>I am thinking of a number between 1 and 100</h4>
+        <h4>Take a guess!</h4>
+        {% if(session['resultClass'] == "right") %}
+            <div class="box green" id="right">
+                <p>{{ session['guess'] }} was the number!</p>
+                <form action="/destroy">
+                    <button type='submit' >Play again!</button>
+                </form>
+            </div>
+        {% elif(session['resultClass']=='tooLow') %}
+            <div class="box red">
+                Too low!
+            </div>
+        {% elif(session['resultClass'] =='tooHigh') %}
+            <div class="box red">
+                Too high!
+            </div>
+        {% endif %}
+        <form action='/result' method='post'>
+            <input type='number' name='guess'>
+            <input class="" type='submit' value='Submit'>
+        </form>
+    </div>
+</body>
+</html>
