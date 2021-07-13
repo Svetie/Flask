@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div id="container">
+        <form action='/save' method='post'>
+            {#name input #}
+            <div class="inputLine">
+                <label for='name' class="labelArea">Your Name:</label>
+                <input type='text' name='name' id="nameInput">
+            </div>
+
+
+            {#location dropdown #}
+            <div id="locInput" class="inputLine">
+                <label for="location" name="location"  class="labelArea">Dojo Location:</label>
+                <select name="location">
+                    <option>Chicago</option>
+                    <option>San Jose</option>
+                    <option>New York</option>
+                    <option>Dallas</option>
+                </select>
+            </div>
+
+
+            {#location dropdown #}
+            <div id="langInput" class="inputLine">
+                <label for="language" name="language"  class="labelArea">Favorite Language:</label>
+                <select name="language">
+                    <option>Pyhton</option>
+                    <option>Java</option>
+                    <option>C#</option>
+                    <option>Javascript</option>
+                </select>
+            </div>
+
+            {# comments #}
+            <div id="commentInput">
+                <label for="comment" name="comment">Comment (optional)</label>
+                <textarea name="comment" id="idText" cols="30" rows="5"></textarea>
+            </div>
+
+            <div id="buttonLine" class="inputLine">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

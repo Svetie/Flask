@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Submitted Info</title>
+</head>
+<body>
+    <div id="container2">
+        <h2>Submitted Info</h2>
+        <div class="inputLine">
+            <p>Name:</p>
+            <p>{{ session['name'] }}</p>
+        </div>
+        <div class="inputLine">
+            <p>Dojo Location: </p>
+            <p>{{ session['location'] }}</p>
+        </div>
+        <div class="inputLine">
+            <p>Favorite Language:</p>
+            <p>{{ session['language'] }}</p>
+        </div>
+        <div class="inputLine">
+            <p>Comment:</p>
+            <p>{{ session['comment'] }}</p>
+        </div>
+
+        <form action="/" method="GET">
+            <button type="submit" id="goBackBtn">Go back</button>
+        </form>
+    </div>
+</body>
+</html>

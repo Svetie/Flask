@@ -1,0 +1,81 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    width: 60%;
+    height: 75vh;
+    margin: 2em auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputLine {
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    padding-bottom: 0.5em;
+}
+
+.labelArea {
+    width: 50%;
+}
+
+#nameInput {
+    width: 50%;
+}
+
+select {
+    width: 50%;
+}
+
+#commentInput {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0px auto;
+    padding-bottom: 0.5em;
+}
+
+input, select, #idText {
+    border: 1px solid black;
+}
+
+button {
+    background-color: rgb(9, 181, 194);
+    color: white;
+    width: 120px;
+    height: 25px;
+    font-size: 11px;
+    box-shadow: 3px 4px black;
+}
+
+#buttonLine {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#container2 {
+    width: 60%;
+    height: 75vh;
+    margin: 2em auto;
+    border: 2px solid black;
+    font-size: 1em;
+}
+
+p {
+    width: 50%;
+}
+
+h2 {
+    margin: 5%;
+    text-decoration: underline;
+}
+
+#goBackBtn {
+    margin-left: 60%;
+    margin-top: 30%;
+}
